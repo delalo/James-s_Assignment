@@ -1,0 +1,124 @@
+
+body{
+    background-color: #E6F4F1;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+:root{
+    --main-radius:5px;
+    --main-padding:5px;
+}
+.container{
+    display: grid;
+    height: 30vh;
+    grid-template-columns: 0.3fr 0.3fr 0.3fr;
+    grid-template-rows: 50px 420px 250px 250px;
+    grid-template-areas: 
+    "nav nav nav"
+    "main main main"
+    "container-edu container-hobby container-cont"
+    "footer footer footer";
+    grid-gap:1rem;
+}
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container-card {
+    padding: 2px 16px;
+  }
+  
+  #img {
+                height: 20%;
+                width: auto;
+                padding-left: 40%;
+                color: rgb(4, 4, 94);
+  }
+nav{
+    background-color: #E86C31;
+    grid-area: nav;
+}
+nav > ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+#container-edu > ul {
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul li {
+    padding-left: 6%;
+}
+main{
+    grid-area: main;
+    background-color:#E6F4F1;
+    text-align: center;
+    padding-top: 4%;
+}
+main img{
+    height: 70%;
+    width: 20%;
+}
+#container-edu{
+    grid-area:container-edu;
+    background-color: rgb(255, 255, 255);
+    color: #E86C31;
+}
+
+#container-hobby{
+    grid-area: container-hobby;
+    background-color: rgb(255, 255, 255);
+    color: #E86C31;
+}
+#container-cont{
+    grid-area: container-cont;
+    background-color: rgb(255, 255, 255);
+    color: #E86C31;
+}
+footer {
+    grid-area:footer;
+    background-color: #E86C31;
+}
+p{
+    color: rgb(4, 4, 94);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+li > p{
+    color: rgb(4, 4, 94);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+h3{
+    color: #E86C31;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bolder;
+}
+#cont {
+    color: #E86C31;
+}
+@media only screen and (max-width:550px){
+    .container{
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 100%;
+        grid-template-rows: 50px 300px 200px 300px 300px 300px;
+        grid-template-areas: 
+        "nav"
+        "main"
+        "container-edu"
+        "container-hobby"
+        "container-cont"
+        "footer"
+    }
+}
